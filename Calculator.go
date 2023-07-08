@@ -130,7 +130,9 @@ func Calculating(data []string, rome map[string]int, mathOp string) {
 		os.Exit(0)
 	}
 	if err3 == false && err4 == false || err1 != nil && err2 != nil {
+		if left > 0 && right > 0 {
 		fmt.Printf(strconv.Itoa(MathMethods(left, right, mathOp)) + "\n")
+			}
 	}
 	if err3 == true && err4 == true {
 		localResult := MathMethods(romeLeft, romeRight, mathOp)
